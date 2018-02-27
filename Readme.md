@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Александр Сражаев](https://up.htmlacademy.ru/htmlcss/20/user/616787).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан].(https://htmlacademy.ru/profile/viktorkan)
 
 ---
 
