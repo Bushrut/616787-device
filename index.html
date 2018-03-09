@@ -13,7 +13,11 @@
     </a>
     <ul class="user-nav">
       <li>
-        <input class="search" type="search" placeholder="Поиск по сайту">
+        <form class="search-form" action="" method="post">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input id="search" type="search" value="" placeholder="Поиск по сайту">
+          <button class="search-button" type="submit">Найти</button>
+        </form>
       </li>
       <li class="login-link">
         <a href="#">Войти</a>
