@@ -77,13 +77,13 @@
       <h1>Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li>
-          <a href="">Главная</a>
+          <a href="#">Главная</a>
         </li>
         <li>
-          <a href="">Каталог товаров</a>
+          <a href="#">Каталог товаров</a>
         </li>
         <li>
-          <a href="">Моноподы для селфи</a>
+          Моноподы для селфи
         </li>
       </ul>
     </section>
@@ -94,7 +94,7 @@
       <div class="sort">
         <h3>сортировка:</h3>
         <ul class="sort-by-tag">
-          <li>
+          <li class="current-sort">
             <a href="#">По цене</a>
           </li>
           <li>
@@ -106,12 +106,12 @@
         </ul>
         <ul class="sort-by-arrows">
           <li>
-            <a href="#">
+            <a class="sorted-by-up sorted-active" href="#">
               <span class="visually-hidden">по популярности вверх</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="sorted-by-down" href="#">
               <span class="visually-hidden">по популярности вниз</span>
             </a>
           </li>
@@ -176,53 +176,53 @@
           <li class="catalog-item">
             <img src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
             <h3>
-              <a href="#">Любительская селфи-палка</a>
+              <a class="catalog-item-link" href="#">Любительская селфи-палка</a>
             </h3>
             <p class="price">500 руб.</p>
             <div class="catalog-item-actions">
-              <button class="button" type="button">в корзину</button>
-              <button class="button" type="button">Добавить к сравнению</button>
+              <a class="button" type="button">в корзину</a>
+              <a class="button-compare" type="button">Добавить к сравнению</a>
             </div>
           </li>
           <li class="catalog-item">
             <img src="img/item-2.jpg" alt="Профессиональная селфи‑палка" width="360" height="380">
             <h3>
-              <a href="#">Профессиональная селфи-палка</a>
+              <a class="catalog-item-link" href="#">Профессиональная селфи-палка</a>
             </h3>
             <p class="price">1 500 руб.</p>
             <div class="catalog-item-actions">
-              <button class="button" type="button">в корзину</button>
-              <button class="button" type="button">Добавить к сравнению</button>
+              <a class="button" type="button">в корзину</a>
+              <a class="button-compare" type="button">Добавить к сравнению</a>
             </div>
           </li>
           <li class="catalog-item">
             <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
             <h3>
-              <a href="#">Непотопляемая селфи-палка</a>
+              <a class="catalog-item-link" href="#">Непотопляемая селфи-палка</a>
             </h3>
             <p class="price">2 500 руб.</p>
             <div class="catalog-item-actions">
-              <button class="button" type="button">в корзину</button>
-              <button class="button" type="button">Добавить к сравнению</button>
+              <a class="button" type="button">в корзину</a>
+              <a class="button-compare" type="button">Добавить к сравнению</a>
             </div>
           </li>
           <li class="catalog-item">
             <img src="img/item-4.jpg" alt="Селфи-палка 'Следуй за мной'" width="360" height="380">
             <h3>
-              <a href="#">Селфи-палка "Следуй за мной"</a>
+              <a class="catalog-item-link" href="#">Селфи-палка "Следуй за мной"</a>
             </h3>
             <p class="price">4 900 руб.</p>
             <div class="catalog-item-actions">
-              <button class="button" type="button">в корзину</button>
-              <button class="button" type="button">Добавить к сравнению</button>
+              <a class="button" type="button">в корзину</a>
+              <a class="button-compare" type="button">Добавить к сравнению</a>
             </div>
           </li>
         </ul>
         <ul class="catalog-pagination">
-          <li>
+          <li class="prev-page">
             <a href="#">назад</a>
           </li>
-          <li class="current-page">
+          <li class=" current-page">
             <a href="#">1</a>
           </li>
           <li>
@@ -231,7 +231,7 @@
           <li>
             <a href="#">3</a>
           </li>
-          <li>
+          <li class="next-page">
             <a href="#">вперед</a>
           </li>
         </ul>
@@ -276,21 +276,27 @@
       </p>
     </div>
     <div class="footer-wrapper-bottom">
-      <ul class="footer-social">
-        <li>
-          <a class="button social-button-facebook" href="#">Фейсбук</a>
+      <ul class="footer-social-list">
+        <li class="social-item">
+          <a class="social-button" href="#">
+            <img src="img/fb.svg" alt="Фейсбук" width="32" height="32">
+          </a>
         </li>
-        <li>
-          <a class="button social-button-instagram" href="#">Инстаграм</a>
+        <li class="social-item">
+          <a class="social-button" href="#">
+            <img src="img/instagram.svg" alt="Инстаграм" width="32" height="32">
+          </a>
         </li>
-        <li>
-          <a class="button social-button-twitter" href="#">Твиттер</a>
+        <li class="social-item">
+          <a class="social-button" href="#">
+            <img src="img/twitter.svg" alt="Твитер" width="32" height="32">
+          </a>
         </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-html.svg" alt="Логотип HTML Academy" width="27" height="35">
       </a>
-    </div>
+    </div
   </footer>
 </body>
 
