@@ -35,9 +35,9 @@
 
     <nav class="main-nav">
       <ul class="dropdown-menu">
-        <li>
+        <li class="item-catalog">
           <a href="#">Каталог товаров</a>
-          <ul class="dropdown-menu-list">
+          <ul class="inner-menu-list">
             <li>
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -58,10 +58,10 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="item-delivery">
           <a href="#">Доставка</a>
         </li>
-        <li>
+        <li class="item-guarantee">
           <a href="#">Гарантия</a>
         </li>
         <li>
@@ -73,21 +73,24 @@
   <main>
     <section class="promo-slider">
       <h2 class="visually-hidden">Топ товаров</h2>
+      <input class="control-item" id="slider-1" name="toggle" checked type="radio">
+      <input class="control-item" id="slider-2" name="toggle" type="radio">
+      <input class="control-item" id="slider-3" name="toggle" type="radio">
       <ul class="promo-slider-controls">
         <li>
-          <button class="promo-slider-button" type="button">
+          <label for="slider-1">
             <span class="visually-hidden">Предложение 1</span>
-          </button>
+          </label>
         </li>
         <li>
-          <button class="promo-slider-button" type="button">
+          <label for="slider-2">
             <span class="visually-hidden">Предложение 2</span>
-          </button>
+          </label>
         </li>
         <li>
-          <button class="promo-slider-button" type="button">
+          <label for="slider-3">
             <span class="visually-hidden">Предложение 3</span>
-          </button>
+          </label>
         </li>
       </ul>
       <ol class="slider-list">
@@ -98,12 +101,12 @@
           <div class="slider-description-item">
             <p class="item-promo">Делай селфи,
               <br>как Бен Стиллер!</p>
-            <p class="item-text">Самая длинна палка для селфи доступна в нашем магазине
-              <br>Восемь(Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
+            <p class="item-text">Самая длинная палка для селфи доступна в нашем магазине
+              <br>Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
             <a class="button" href="#">подробнее</a>
             <table class="features-list">
               <tr>
-                <td>8,5</td>
+                <td>8,5 м</td>
                 <td>5 кг</td>
                 <td>Карбон</td>
               </tr>
@@ -115,9 +118,9 @@
             </table>
           </div>
         </li>
-        <li class="slider-item">
+        <li class="slider-item ">
           <div class="slider-img-item">
-            <img src="img/slider-2.png" alt="Фитнес браслет" width="384" height="486">
+            <img src="img/slider-2.png" alt="Фитнес браслет" width="345" height="485">
           </div>
           <div class="slider-description-item">
             <p class="item-promo">Худеем
@@ -138,7 +141,7 @@
         </li>
         <li class="slider-item">
           <div class="slider-img-item">
-            <img src="img/slider-3.png" alt="Мощный квадракоптер" width="384" height="486">
+            <img src="img/slider-3.png" alt="Мощный квадракоптер" width="526" height="334">
           </div>
           <div class="slider-description-item">
             <p class="item-promo">Порхает как бабочка,
@@ -166,37 +169,32 @@
       <ul class="big-seller-list">
         <li class="big-seller-item">
           <a href="#">
-            <!-- <img src="img/popular-1.svg" alt="Логотип Виртуальная реальность" width="160" height="160"> -->
             <p>Виртуальная реальность</p>
           </a>
         </li>
         <li class="big-seller-item">
           <a href="#">
-            <!-- <img src="img/popular-2.svg" alt="Логотип Моноподы для селфи" width="160" height="160"> -->
-            <p>Моноподы для селфи</p>
+            <p>Моноподы
+              <br> для селфи</p>
           </a>
         </li>
         <li class="big-seller-item">
           <a href="#">
-            <!-- <img src="img/popular-3.svg" alt="Логотип Экшн-камеры" width="160" height="160"> -->
             <p>Экшн-камеры</p>
           </a>
         </li>
         <li class="big-seller-item">
           <a href="#">
-            <!-- <img src="img/popular-4.svg" alt="Логотип Фитнес-браслеты" width="160" height="160"> -->
             <p>Фитнес-браслеты</p>
           </a>
         </li>
         <li class="big-seller-item">
           <a href="#">
-            <!-- <img src="img/popular-5.svg" alt="Логотип Умные часы" width="160" height="160"> -->
             <p>Умные часы</p>
           </a>
         </li>
         <li class="big-seller-item">
           <a href="#">
-            <!-- <img src="img/popular-6.svg" alt="Логотип Квадрокоптеры" width="160" height="160"> -->
             <p>Квадрокоптеры</p>
           </a>
         </li>
@@ -204,71 +202,75 @@
     </section>
 
     <section class="services-slider">
-      <h2 class="visually-hidden">Услуги</h2>
-      <div class="services-container-controls">
-        <ul class="services-controls">
-          <li>
-            <label class="button control-button" for="services-slider-item1">доставка</label>
-            <input type="radio" name="services-controls" id="services-slider-item1">
-          </li>
-          <li>
-            <label class="button control-button" for="services-slider-item2">гарантия</label>
-            <input type="radio" name="services-controls" id="services-slider-item2">
-          </li>
-          <li>
-            <label class="button control-button" for="services-slider-item3">кредит</label>
-            <input type="radio" name="services-controls" id="services-slider-item3">
-          </li>
-        </ul>
-      </div>
-      <div class="services-container-slides">
-        <ul class="services-list">
-          <li class="services-item">
-            <h2>Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему
-              <br>подъезду совершенно бесплатно! Ведь мы неплохо
-              <br>заработаем, поднимая его на ваш этаж.</p>
-          </li>
-          <li class="services-item">
-            <h2>Гарантия</h2>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит
-              <br>дом — не переживайте, мы выдадим вам новый.
-              <br>Товар, не дом, конечно же.</p>
-          </li>
-          <li class="services-item">
-            <h2>Кредит</h2>
-            <p>Залезть в долговую яму стало проще! Кредитные
-              <br>консультанты подберут для вас наиболее выгодные
-              <br>условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
+      <div class="wrapper">
+        <h2 class="visually-hidden">Услуги</h2>
+        <input class="control-slider" type="radio" name="services-controls" id="services-slider-item1" checked>
+        <input class="control-slider" type="radio" name="services-controls" id="services-slider-item2">
+        <input class="control-slider" type="radio" name="services-controls" id="services-slider-item3">
+        <div class="services-container-controls">
+          <ul class="services-controls">
+            <li>
+              <label class="button control-button" for="services-slider-item1">доставка</label>
+            </li>
+            <li>
+              <label class="button control-button" for="services-slider-item2">гарантия</label>
+            </li>
+            <li>
+              <label class="button control-button" for="services-slider-item3">кредит</label>
+            </li>
+          </ul>
+        </div>
+        <div class="services-container-slides">
+          <ul class="services-list">
+            <li class="services-item">
+              <h2>Доставка</h2>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему
+                <br>подъезду совершенно бесплатно! Ведь мы неплохо
+                <br>заработаем, поднимая его на ваш этаж.</p>
+            </li>
+            <li class="services-item">
+              <h2>Гарантия</h2>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит
+                <br>дом — не переживайте, мы выдадим вам новый.
+                <br>Товар, не дом, конечно же.</p>
+            </li>
+            <li class="services-item">
+              <h2>Кредит</h2>
+              <p>Залезть в долговую яму стало проще! Кредитные
+                <br>консультанты подберут для вас наиболее выгодные
+                <br>условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="partners">
-      <h2 class="visually-hidden">Партнеры</h2>
-      <ul class="partners-list">
-        <li>
-          <a class="partner-item" href="#">
-            <img src="img/logo-1.jpg" alt="Логотип DJI" width="260" height="100">
-          </a>
-        </li>
-        <li>
-          <a class="partner-item" href="#">
-            <img src="img/logo-2.jpg" alt="Логотип SP Gadjets" width="260" height="100">
-          </a>
-        </li>
-        <li>
-          <a class="partner-item" href="#">
-            <img src="img/logo-3.jpg" alt="Логотип Go Pro" width="260" height="100">
-          </a>
-        </li>
-        <li>
-          <a class="partner-item" href="#">
-            <img src="img/logo-4.jpg" alt="Логотип Vive" width="260" height="100">
-          </a>
-        </li>
-      </ul>
+      <div class="wrapper">
+        <h2 class="visually-hidden">Партнеры</h2>
+        <ul class="partners-list">
+          <li>
+            <a class="partner-item" href="#">
+              <img src="img/logo-1.jpg" alt="Логотип DJI" width="260" height="100">
+            </a>
+          </li>
+          <li>
+            <a class="partner-item" href="#">
+              <img src="img/logo-3.jpg" alt="Логотип SP Gadjets" width="260" height="100">
+            </a>
+          </li>
+          <li>
+            <a class="partner-item" href="#">
+              <img src="img/logo-2.jpg" alt="Логотип Go Pro" width="260" height="100">
+            </a>
+          </li>
+          <li>
+            <a class="partner-item" href="#">
+              <img src="img/logo-4.jpg" alt="Логотип Vive" width="260" height="100">
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div class="wrapper">
@@ -296,14 +298,14 @@
               <img src="img/map.jpg" alt="Офис по адресу ул.Строителей, 15. Москва" width="560" height="222">
             </a>
           </div>
-          <a class="button" href="#">напишите нам</a>
+          <a class="button feedback-button" href="#">напишите нам</a>
         </div>
       </section>
     </div>
   </main>
   <footer class="footer">
-    <div class="footer-wrapper-top">
-      <a href="#">
+    <div class="wrapper">
+      <div class="footer-wrapper-top">
         <a class="footer-logo" href="#">
           device
         </a>
@@ -318,45 +320,46 @@
             <a href="#">Корзина</a>
           </li>
         </ul>
-    </div>
-    <div class="footer-wrapper-middle">
-      <p class="adress">г. Москва, ул. Строителей, 15</p>
-      <ul class="services-menu">
-        <li class="service-menu-item">
-          <a href="#">доставка</a>
-        </li>
-        <li class="service-menu-item">
-          <a href="#">гарантия</a>
-        </li>
-        <li class="service-menu-item">
-          <a href="#">контакты</a>
-        </li>
-      </ul>
-      <p class="phone">
-        Тел.: +7 (495) 495-95-95
-      </p>
-    </div>
-    <div class="footer-wrapper-bottom">
-      <ul class="footer-social-list">
-        <li class="social-item">
-          <a class="social-button" href="#">
-            <img src="img/fb.svg" alt="Фейсбук" width="32" height="32">
-          </a>
-        </li>
-        <li class="social-item">
-          <a class="social-button" href="#">
-            <img src="img/instagram.svg" alt="Инстаграм" width="32" height="32">
-          </a>
-        </li>
-        <li class="social-item">
-          <a class="social-button" href="#">
-            <img src="img/twitter.svg" alt="Твитер" width="32" height="32">
-          </a>
-        </li>
-      </ul>
-      <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-html.svg" alt="Логотип HTML Academy" width="27" height="35">
-      </a>
+      </div>
+      <div class="footer-wrapper-middle">
+        <p class="adress">г. Москва, ул. Строителей, 15</p>
+        <ul class="services-menu">
+          <li class="service-menu-item">
+            <a href="#">доставка</a>
+          </li>
+          <li class="service-menu-item">
+            <a href="#">гарантия</a>
+          </li>
+          <li class="service-menu-item">
+            <a href="#">контакты</a>
+          </li>
+        </ul>
+        <p class="phone">
+          Тел.:+7 (495) 495-95-95
+        </p>
+      </div>
+      <div class="footer-wrapper-bottom">
+        <ul class="footer-social-list">
+          <li class="social-item">
+            <a class="social-button" href="#">
+              <img src="img/fb.svg" alt="Фейсбук" width="32" height="32">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="#">
+              <img src="img/instagram.svg" alt="Инстаграм" width="32" height="32">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="#">
+              <img src="img/twitter.svg" alt="Твитер" width="32" height="32">
+            </a>
+          </li>
+        </ul>
+        <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-html.svg" alt="Логотип HTML Academy" width="27" height="35">
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -388,6 +391,8 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
+
+  <script src="js/modal.js"></script>
 </body>
 
 </html>
