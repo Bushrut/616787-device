@@ -40,7 +40,6 @@ a {
 
 img {
   max-width: 100%;
-  /* height: auto; */
 }
 
 .wrapper {
@@ -72,7 +71,7 @@ img {
 /* навигация юзера */
 .user-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 1045px;
   list-style-type: none;
@@ -85,6 +84,10 @@ img {
   position: relative;
   text-transform: none;
   color: #000000;
+}
+
+.user-nav a:hover {
+  opacity: 0.6;
 }
 
 .user-nav input[type='search'] {
@@ -116,19 +119,31 @@ input[type='search']:focus + .search-button {
   position: relative;
 }
 
-.user-nav li:first-child {
+.form-search {
   margin-right: 91px;
 }
 
-.user-nav .login-link {
-  margin-right: 239px;
+.compare-items {
+  margin-left: 237px;
 }
 
-.user-nav li:last-of-type {
-  margin-left: 63px;
+.cart {
+margin-left: 64px;
 }
 
-.user-nav li:first-child::before {
+.wrapper-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper-nav .log-out {
+  margin-left: 23px;
+  opacity: 0.6;
+}
+.wrapper-nav .compare-items {
+  margin-left: 85px;
+}
+
+.form-search::before {
   position: absolute;
   content: '';
   top: 18px;
@@ -138,7 +153,7 @@ input[type='search']:focus + .search-button {
   background: url('../img/search.svg') center center no-repeat;
 }
 
-.user-nav li:nth-child(3)::before {
+.compare-items::before {
   position: absolute;
   content: '';
   top: 10px;
@@ -148,7 +163,7 @@ input[type='search']:focus + .search-button {
   background: url('../img/compare.svg') center center no-repeat;
 }
 
-.user-nav li:last-child::before {
+.cart::before {
   position: absolute;
   content: '';
   top: 9px;
@@ -158,11 +173,12 @@ input[type='search']:focus + .search-button {
   background: url('../img/cart.svg') center center no-repeat;
 }
 
-.login-link a::before {
+.login-link::before,
+.profile-link::before {
   position: absolute;
   content: '';
-  top: 4px;
-  left: -27px;
+  top: 9px;
+  left: -28px;
   width: 14px;
   height: 12px;
   background: url('../img/user.svg') center center no-repeat;
@@ -183,6 +199,8 @@ input[type='search']:focus + .search-button {
   border: 2px solid #000000;
 }
 
+
+
 /* главная навигация */
 .main-nav {
   width: 1145px;
@@ -194,6 +212,10 @@ input[type='search']:focus + .search-button {
   margin: 0;
   list-style-type: none;
   margin-bottom: 160px;
+}
+
+.wrapper-dropdown-menu .dropdown-menu {
+  margin-bottom: 47px;
 }
 
 .dropdown-menu a {
@@ -235,7 +257,7 @@ input[type='search']:focus + .search-button {
   position: absolute;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 1100px;
+  width: 1160px;
   letter-spacing: 0.15px;
   list-style-type: none;
   padding: 0;
@@ -848,11 +870,15 @@ input[type='search']:focus + .search-button {
 
 .footer-user-nav {
   display: flex;
-  justify-content: space-between;
-  width: 300px;
+  justify-content: flex-end;
+  width: 500px;
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.footer-user-nav li {
+  position: relative;
 }
 
 .footer-user-nav a {
@@ -860,6 +886,46 @@ input[type='search']:focus + .search-button {
   line-height: 36px;
   color: #ffffff;
   opacity: 0.6;
+}
+
+.footer-user-nav .login-link {
+  margin: 0;
+}
+
+.footer-user-nav .log-out {
+  margin-left: 23px;
+}
+
+.footer-user-nav .compare-items {
+  margin-left: 65px;
+}
+
+.footer-user-nav .cart {
+  margin-left: 64px;
+}
+
+.footer-user-nav .login-link::before {
+  top: 13px;
+  left: -25px;
+  background: url('../img/nav-user-footer.svg') center center no-repeat;
+}
+
+.footer-user-nav .profile-link::before {
+  top: 13px;
+  left: -26px;
+  background: url('../img/nav-user-footer.svg') center center no-repeat;
+}
+
+.footer-user-nav .compare-items::before {
+  top: 14px;
+  left: -19px;
+  background: url('../img/nav-compare-footer.svg') center center no-repeat;
+}
+
+.footer-user-nav .cart::before {
+  top: 13px;
+  left: -21px;
+  background: url('../img/nav-cart-footer.svg') center center no-repeat;
 }
 
 .footer-user-nav a:hover,
@@ -874,7 +940,7 @@ input[type='search']:focus + .search-button {
 .footer-wrapper-middle {
   display: flex;
   justify-content: flex-start;
-  padding-top: 9px;
+  padding-top: 10px;
 }
 
 .adress {
@@ -903,6 +969,7 @@ input[type='search']:focus + .search-button {
 }
 
 .phone {
+  margin-top: 13px;
   margin-left: auto;
   color: #ffffff;
   text-transform: none;
@@ -1052,10 +1119,6 @@ fieldset ul {
   z-index: 4;
 }
 
-.modal-show {
-  display: block;
-}
-
 .feedback-form {
   display: flex;
   padding: 0;
@@ -1135,13 +1198,21 @@ fieldset ul {
 /* Всплывающая карта */
 .modal-map {
   display: none;
-  position: relative;
+  position: fixed;
   width: 960px;
   height: 559px;
+  top: calc(50% - 280px);
+  left: calc(50% - 480px);
+  background-color: #e5e3df;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.modal-show {
+  display: block;
 }
 
 .header-logo:hover,
-.user-nav a:hover,
 .dropdown-menu a:hover,
 .inner-menu-list a:hover,
 .footer-logo:hover,
@@ -1171,6 +1242,7 @@ fieldset ul {
 .wrapper .chosen-item {
   padding-left: 59px;
   margin: 0;
+  margin-top: 37px;
   margin-bottom: 41px;
 }
 
@@ -1212,7 +1284,7 @@ fieldset ul {
   width: 10px;
   height: 10px;
   top: 14px;
-  right: -8px;
+  right: -5px;
 }
 
 .breadcrumbs a:hover {
@@ -1363,7 +1435,7 @@ fieldset ul {
   padding-left: 60px;
   padding-right: 66px;
   padding-top: 69px;
-  background-color: #dcdcdc;
+  background-color: #efefef;
 }
 
 .feedback-form,
@@ -1453,6 +1525,7 @@ fieldset ul {
 .slider-max label {
   position: absolute;
   top: 11px;
+  text-transform: none
 }
 
 .slider-min label {
