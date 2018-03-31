@@ -1,3 +1,38 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  900% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 @font-face {
   font-family: 'Gilroy';
   src: url('../fonts/gilroylight.woff2') format('woff2');
@@ -128,7 +163,7 @@ input[type='search']:focus + .search-button {
 }
 
 .cart {
-margin-left: 64px;
+  margin-left: 64px;
 }
 
 .wrapper-nav {
@@ -198,8 +233,6 @@ margin-left: 64px;
   margin-left: -4px;
   border: 2px solid #000000;
 }
-
-
 
 /* главная навигация */
 .main-nav {
@@ -1208,10 +1241,6 @@ fieldset ul {
   z-index: 2;
 }
 
-.modal-show {
-  display: block;
-}
-
 .header-logo:hover,
 .dropdown-menu a:hover,
 .inner-menu-list a:hover,
@@ -1525,7 +1554,7 @@ fieldset ul {
 .slider-max label {
   position: absolute;
   top: 11px;
-  text-transform: none
+  text-transform: none;
 }
 
 .slider-min label {
@@ -1801,4 +1830,15 @@ fieldset ul {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
