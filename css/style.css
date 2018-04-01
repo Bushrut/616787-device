@@ -157,6 +157,16 @@ img {
   font-weight: 800;
   color: #000000;
 }
+
+.header-logo:hover,
+.header-logo:focus {
+  opacity: 0.6;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
 /* навигация юзера */
 .user-nav {
   display: -webkit-box;
@@ -183,6 +193,10 @@ img {
 
 .user-nav a:hover {
   opacity: 0.6;
+}
+
+.user-nav a:active {
+  opacity: 0.3;
 }
 
 .user-nav input[type='search'] {
@@ -331,6 +345,14 @@ input[type='search']:focus + .search-button {
   color: #000000;
 }
 
+.dropdown-menu a:hover {
+  opacity: 0.6;
+}
+
+.dropdown-menu a:active {
+  opacity: 0.3;
+}
+
 .item-catalog {
   margin-right: 320px;
 }
@@ -383,6 +405,14 @@ input[type='search']:focus + .search-button {
   text-transform: none;
   letter-spacing: 0;
   color: #000000;
+}
+
+.inner-menu-list a:hover {
+  opacity: 0.6;
+}
+
+.inner-menu-list a:active {
+  opacity: 0.3;
 }
 
 .inner-menu-list li:first-child {
@@ -756,11 +786,6 @@ input[type='search']:focus + .search-button {
   top: 80px;
   list-style-type: none;
   z-index: 2;
-  /* font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-  letter-spacing: 5px; */
 }
 
 .services-controls li {
@@ -1116,6 +1141,15 @@ input[type='search']:focus + .search-button {
   color: #ffffff;
 }
 
+.services-menu a:hover,
+.services-menu a:focus {
+  opacity: 0.6;
+}
+
+.services-menu a:active {
+  opacity: 0.3;
+}
+
 .phone {
   margin-top: 13px;
   margin-left: auto;
@@ -1390,25 +1424,14 @@ fieldset ul {
   z-index: 2;
 }
 
-.header-logo:hover,
-.dropdown-menu a:hover,
-.inner-menu-list a:hover,
 .footer-logo:hover,
-.header-logo:focus,
 .footer-logo:focus,
-.services-menu a:hover,
-.services-menu a:focus,
 .footer-copyright:hover,
 .footer-copyright:focus {
   opacity: 0.6;
 }
 
-.header-logo:active,
-.user-nav a:active,
-.inner-menu-list a:active,
-.dropdown-menu a:active,
 .footer-logo:active,
-.services-menu a:active,
 .footer-copyright:active {
   opacity: 0.3;
 }
@@ -1931,14 +1954,11 @@ fieldset ul {
   background-color: transparent;
 }
 
-.catalog-item-actions:hover {
-  background-color: rgba(238, 238, 238, 0.7);
-}
-
 .catalog-item:hover .catalog-item-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: rgba(238, 238, 238, 0.7);
 }
 
 .water-mark {
