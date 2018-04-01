@@ -6,7 +6,7 @@
   <title>HTML Academy: Каталог</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-minified.css">
 </head>
 
 <body>
@@ -16,26 +16,28 @@
     </a>
     <ul class="user-nav">
       <li class="form-search">
-        <form class="search-form" action="" method="get">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
           <input id="search" type="search" value="" placeholder="Поиск по сайту">
           <button class="search-button" type="submit">Найти</button>
         </form>
       </li>
-      <div class="wrapper-nav">
-        <li class="profile-link">
-          <a href="#">Валентин Петухов</a>
-        </li>
-        <li class="log-out">
-          <a href="#">Выйти</a>
-        </li>
-        <li class="compare-items">
-          <a href="#">Сравнить</a>
-        </li>
-        <li class="cart">
-          <a href="#">Корзина</a>
-        </li>
-      </div>
+      <li>
+        <ul class="wrapper-nav">
+          <li class="profile-link">
+            <a href="#">Валентин Петухов</a>
+          </li>
+          <li class="log-out">
+            <a href="#">Выйти</a>
+          </li>
+          <li class="compare-items">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="cart">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+      </li>
     </ul>
 
     <nav class="main-nav">
@@ -131,7 +133,8 @@
     <div class="catalog-wrapper">
       <div class="wrapper">
         <section class="catalog-filter-form">
-          <form class="filters-form" action="" method="get">
+          <h2 class="visually-hidden" >Фильтр товаров</h2>
+          <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset>
               <legend class="fieldset-legend">Стоимость</legend>
               <div class="price-range">
@@ -204,8 +207,8 @@
                 <p class="price">500 руб.</p>
               </div>
               <div class="catalog-item-actions">
-                <a class="button" type="button">в корзину</a>
-                <a class="button-compare" type="button">Добавить к сравнению</a>
+                <a class="button">в корзину</a>
+                <a class="button-compare">Добавить к сравнению</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -217,8 +220,8 @@
                 <p class="price">1 500 руб.</p>
               </div>
               <div class="catalog-item-actions">
-                <a class="button" type="button">в корзину</a>
-                <a class="button-compare" type="button">Добавить к сравнению</a>
+                <a class="button">в корзину</a>
+                <a class="button-compare">Добавить к сравнению</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -230,8 +233,8 @@
                 <p class="price">2 500 руб.</p>
               </div>
               <div class="catalog-item-actions">
-                <a class="button" type="button">в корзину</a>
-                <a class="button-compare" type="button">Добавить к сравнению</a>
+                <a class="button">в корзину</a>
+                <a class="button-compare">Добавить к сравнению</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -244,8 +247,8 @@
                 <p class="price">4 900 руб.</p>
               </div>
               <div class="catalog-item-actions">
-                <a class="button" type="button">в корзину</a>
-                <a class="button-compare" type="button">Добавить к сравнению</a>
+                <a class="button">в корзину</a>
+                <a class="button-compare">Добавить к сравнению</a>
               </div>
             </li>
           </ul>
