@@ -483,6 +483,7 @@ input[type='search']:focus + .search-button {
   margin: 0;
   border: none;
   cursor: pointer;
+  vertical-align: top;
   background: transparent url('../img/slider-button-empty.svg') center center
     no-repeat;
   background-size: cover;
@@ -696,6 +697,7 @@ input[type='search']:focus + .search-button {
   height: 160px;
   top: -192px;
   left: 0;
+  /* background-color: #f7e296; */
 }
 
 .big-seller-item a::before {
